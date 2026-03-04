@@ -1,14 +1,12 @@
-function toggleSidebar() {
-    document.getElementById('notesSidebar').classList.toggle('collapsed');
-}
-
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function(event) {
     const textarea = document.getElementById('noteInput');
     const preview = document.getElementById('notePreview');
     const previewBtn = document.getElementById('previewBtn');
+    const toggleBtnEl = document.getElementById("toggleBtn");
 
     let isPreview = false;
 
+    toggleBtnEl.addEventListener("click",()=>document.getElementById('notesSidebar').classList.toggle('collapsed'));
     previewBtn.addEventListener('click', () => {
         if (!isPreview) {
             // EDIT → PREVIEW
