@@ -244,3 +244,7 @@ body {
   color: #adb5bd;
   margin: 1rem 0;
 }
+
+.error-el{
+  color: red;
+}
